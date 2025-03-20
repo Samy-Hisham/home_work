@@ -34,7 +34,8 @@ void main() {
 void retrieveWeather(Map<String, WeatherData> weatherMap, String? cityName) {
   if (cityName != null && weatherMap.containsKey(cityName)) {
     WeatherData weather = weatherMap[cityName]!;
-    print(weather);
+        print(weather.city + ' ' + weather.temperature.toString() + ' ' + weather.humidity.toString());
+
   } else {
     print('Weather data for the city "$cityName" is not available');
   }
